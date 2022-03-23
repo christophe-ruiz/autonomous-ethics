@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { InformationsComponent } from './informations/informations.component';
 import { JudgeComponent } from './judge/judge.component';
 import { ScenarioComponent } from './scenario/scenario.component';
+import { FooterComponent } from './footer/footer.component';
+import { TileComponent } from './tile/tile.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ScenarioComponent } from './scenario/scenario.component';
     HeaderComponent,
     InformationsComponent,
     JudgeComponent,
-    ScenarioComponent
+    ScenarioComponent,
+    FooterComponent,
+    TileComponent
   ],
   imports: [
     BrowserModule,

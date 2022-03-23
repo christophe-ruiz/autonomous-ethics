@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Product Sans";
+  src: url("assets/fonts/Product Sans/regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("assets/fonts/Product Sans/bold.ttf");
+  font-weight: bold;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black : #101820;
+  --violet : #7E78D2;
+  --red : #F05365;
+  --beige : #FFE8E1;
+  --white : #F9F5FF;
+}

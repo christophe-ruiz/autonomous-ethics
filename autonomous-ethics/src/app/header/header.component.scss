@@ -1,0 +1,47 @@
+
+span {
+  font-family: "Product Sans", sans-serif;
+  cursor: pointer;
+}
+
+nav > span {
+  background: var(--beige);
+  color: var(--black);
+  margin-right: 4vw;
+  font-size: 1.5vw;
+  padding: 0.5vw 1vw;
+  font-weight: lighter;
+  border-radius: 1vw;
+  transition: 0.2s;
+}
+
+nav > span:hover {
+  transition: 0.2s;
+  transform: scale(1.05);
+  color: var(--red);
+}
+
+header {
+  background: var(--black);
+  color: var(--beige);
+  height: 7vw;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2vw;
+}
+
+#title {
+  height: 100%;
+  margin-left: 4vw;
+  font-size: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
