@@ -1,12 +1,12 @@
 const { Router } = require('express')
+const CharactersRouter = require('./characters')
+const ScenariosRouter = require('./scenarios')
+const dotenv = require("dotenv");
+dotenv.config();
 
-const router = new Router()
+const router = new Router({ mergeParams: true })
 router.get('/status', (req, res) => res.status(200).json('ok'));
-// router.use('/applications', ApplicationRouter);
-// router.use('/mechanics', MatesRouter);
-// router.use('/messages', MessagesRouter);
-// router.use('/contacts', ContactsRouter);
-// router.use('/offers', OffersRouter);
-// router.use('/login', LoginRouter);
+router.use('/characters', CharactersRouter);
+router.use('/scenarios', ScenariosRouter);
 
 module.exports = router

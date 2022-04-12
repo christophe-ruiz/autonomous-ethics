@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const fileUpload = require('express-fileupload');
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -21,12 +20,6 @@ const api = require('./api');
     app.use('/api', api)
     app.use('*', (req, res) => res.status(404).end())
 
-    app.use(fileUpload({
-        createParentPath: true,
-        limits: {
-            fileSize: 25 * (1024 ** 3)
-        },
-    }));
     const server = app.listen(process.env.PORT, () => cb && cb(server))
 })((server => {
     logger.info(`Server is listening on port ${server.address().port}`)

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -9,6 +9,8 @@ import { JudgeComponent } from './judge/judge.component';
 import { ScenarioComponent } from './scenario/scenario.component';
 import { FooterComponent } from './footer/footer.component';
 import { TileComponent } from './tile/tile.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { ScenarioCharacterChooserComponent } from './scenario/scenario-character-chooser/scenario-character-chooser.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,14 @@ import { TileComponent } from './tile/tile.component';
     JudgeComponent,
     ScenarioComponent,
     FooterComponent,
-    TileComponent
+    TileComponent,
+    StatisticsComponent,
+    ScenarioCharacterChooserComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

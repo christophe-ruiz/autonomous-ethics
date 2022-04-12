@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./judge.component.scss']
 })
 export class JudgeComponent implements OnInit {
+
+  current_choice: number = 1;
+  number_of_choices: number = 10;
+
   choice1_desc: String = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget erat finibus, fringilla purus sed, gravida mi. Vivamus rhoncus turpis vel urna sodales vulputate. Etiam dolor elit, tristique non vestibulum sed, tincidunt et orci. Nulla et dui ac justo mollis scelerisque. Vestibulum a augue in est rutrum luctus. Sed volutpat in mauris sed sodales. Proin vel ipsum risus. Nunc mollis convallis ipsum, vitae ornare est suscipit vel. Phasellus mattis ut velit id viverra.\n" +
     "\n" +
     "Cras fringilla aliquet dolor non imperdiet. Nulla facilisi. Suspendisse blandit erat a risus feugiat feugiat. Proin ex diam, viverra dictum dui id, egestas molestie ligula. Nunc congue eu dui eget sagittis. Vivamus a feugiat arcu. Quisque viverra, ligula vitae vehicula eleifend, sapien dui efficitur justo, nec vehicula urna tortor quis quam. Phasellus nec risus quis magna elementum ullamcorper eu sed eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Aliquam id iaculis magna. Pellentesque nulla nunc, pellentesque et viverra pellentesque, luctus eget ex. Suspendisse suscipit id felis auctor vehicula. Vestibulum sodales, libero at tempus hendrerit, felis justo vestibulum est, posuere auctor nisi ipsum ac nisl. Donec interdum volutpat elit vel euismod.\n" +
@@ -24,6 +28,10 @@ export class JudgeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
   }
 
 }

@@ -3,12 +3,14 @@
     <div id="left">
       <app-tile></app-tile>
       <button>Choice 1</button>
-      <p class="description">{{choice1_desc}}</p>
+      <p class="description" #desc >{{choice1_desc}}</p>
     </div>
+    <span id="counter">{{current_choice}}/{{number_of_choices}}</span>
+    <span class="desc-title" (click)="scroll(desc)">&#8595; Full descriptions &#8595;</span>
     <div id="right">
       <app-tile></app-tile>
       <button>Choice 2</button>
-      <p class="description">{{choice2_desc}}</p>
+      <p class="description" >{{choice2_desc}}</p>
     </div>
   </div>
 </main>
