@@ -74,6 +74,10 @@ module.exports = class BaseModel {
         this.save()
     }
 
+    get_schema() {
+        return this.schema;
+    }
+
     delete(id) {
         if (typeof id === 'string') id = parseInt(id, 10)
         const objIndex = this.items.findIndex((item) => item.id === id)

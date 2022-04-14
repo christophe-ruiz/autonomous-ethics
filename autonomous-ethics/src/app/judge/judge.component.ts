@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SessionService} from "../../services/session.service";
+import {Scenario} from "../../models/scenario";
 
 @Component({
   selector: 'app-judge',
@@ -7,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JudgeComponent implements OnInit {
 
-  current_choice: number = 1;
-  number_of_choices: number = 10;
+  public scenario: Scenario | null = null;
+
+  public current_choice: number = 1;
+  public readonly number_of_choices: number = 10;
 
   choice1_desc: String = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget erat finibus, fringilla purus sed, gravida mi. Vivamus rhoncus turpis vel urna sodales vulputate. Etiam dolor elit, tristique non vestibulum sed, tincidunt et orci. Nulla et dui ac justo mollis scelerisque. Vestibulum a augue in est rutrum luctus. Sed volutpat in mauris sed sodales. Proin vel ipsum risus. Nunc mollis convallis ipsum, vitae ornare est suscipit vel. Phasellus mattis ut velit id viverra.\n" +
     "\n" +
@@ -25,13 +29,17 @@ export class JudgeComponent implements OnInit {
     "\n" +
     "Suspendisse varius lectus elit, quis mollis quam convallis nec. Suspendisse libero nisi, ullamcorper vel iaculis vel, bibendum ut odio. Praesent scelerisque lorem quis leo vehicula, euismod vulputate nunc consequat. Suspendisse tempus commodo risus id pretium. Donec rhoncus gravida ex at tincidunt. Etiam ut cursus enim. Phasellus sed augue a lectus suscipit maximus id eu mauris. Proin ultrices blandit nisi, at congue augue cursus a. In viverra pulvinar tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non facilisis eros. Aenean vitae sollicitudin risus, at lobortis mauris. Curabitur a lectus pellentesque, vestibulum diam nec, tempus sapien. Donec ultrices nisl erat, sit amet condimentum nibh placerat ac. "
 
-  constructor() { }
+  constructor(private sessionStorage: SessionService) { }
 
   ngOnInit(): void {
   }
 
-  scroll(el: HTMLElement) {
+  scroll(el: HTMLElement): void {
     el.scrollIntoView({behavior: 'smooth'});
+  }
+
+  public select(which: boolean): void {
+    this.sessionStorage.pushChoice(this.current_choice, which);
   }
 
 }

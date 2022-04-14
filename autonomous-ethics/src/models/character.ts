@@ -1,4 +1,15 @@
 export interface Character {
   id: Number,
-  image: String
+  image: String,
+  sex: boolean,
+  isYoung: boolean,
+  isOld: boolean,
+  isFat: boolean,
+  isFit: boolean,
+  isExecutive: boolean,
+  isMedic: boolean,
+  isHomeless: boolean,
+  isCriminal: boolean,
+  isHuman: boolean,
+  isAnimal: boolean,
 }

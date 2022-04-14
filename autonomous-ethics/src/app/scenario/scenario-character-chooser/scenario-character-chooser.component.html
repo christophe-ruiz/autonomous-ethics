@@ -1,8 +1,9 @@
 <div id="chooser">
   <div id="list">
-    <img class="characters" *ngFor="let c of characters" src="{{this.serverUrl + 'characters/images/' + c.image}}">
+    <img class="characters" (click)="addCharacter(c)" *ngFor="let c of characters" src="{{this.serverUrl + 'characters/images/' + c.image}}">
   </div>
   <div id="visualizer">
-    <img id="car" src="assets/img/car.png" alt="Autonomous vehicule">
+    <img *ngIf="!isForLights" id="car" src="assets/img/car.png" alt="Autonomous vehicule">
+    <img class="characters" (click)="removeCharacter(c)" *ngFor="let c of selectedCharacters" src="{{this.serverUrl + 'characters/images/' + c.image}}">
   </div>
 </div>

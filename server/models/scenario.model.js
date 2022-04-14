@@ -9,5 +9,8 @@ module.exports = new BaseModel('Scenario', {
     car_occupants: Joi.array().required(),
     leftside: Joi.array().required(),
     rightside: Joi.array().required(),
-    description: Joi.string().required()
+    description: Joi.object({
+        "left": Joi.string().required(),
+        "right": Joi.string().required()
+    }).required()
 })

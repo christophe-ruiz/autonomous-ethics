@@ -3,6 +3,7 @@ main {
   font-family: "Product Sans", sans-serif;
   color: white;
   background: var(--violet);
+  user-select: none;
 }
 
 #car, #crosswalks {

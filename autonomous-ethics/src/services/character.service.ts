@@ -13,7 +13,7 @@ export class CharacterService {
   public characters$: BehaviorSubject<Character[]> = new BehaviorSubject<Character[]>([]);
 
   constructor(private http: HttpClient) {
-    this.retrieveCharacters()
+    this.retrieveCharacters();
   }
 
   public retrieveCharacters () {
