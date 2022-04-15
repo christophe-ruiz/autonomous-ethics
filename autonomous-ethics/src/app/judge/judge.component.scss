@@ -42,13 +42,13 @@ button {
   margin-top: 1.5vw;
 }
 
-#left > button {
+#left button {
   background: var(--black);
   border: white 2px solid;
   color: white;
 }
 
-#right > button {
+#right button {
   border: solid 2px var(--black);
   background: white;
   color: var(--black);
@@ -99,6 +99,30 @@ button:hover {
 .desc-title:hover {
   transform: scale(1.1);
   transition: 0.2s;
+}
+
+.move {
+  position: absolute;
+  z-index: 20;
+  font-size: 1vw;
+  padding: 0.5vw 1vw;
+}
+
+.forth {
+  left: 3vw;
+  bottom: 2vw;
+}
+
+.back {
+  right: 3vw;
+  bottom: 2vw;
+}
+
+.actions {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #counter {

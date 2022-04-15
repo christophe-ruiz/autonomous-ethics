@@ -10,9 +10,11 @@ import {Scenario} from "../../models/scenario";
 export class JudgeComponent implements OnInit {
 
   public scenario: Scenario | null = null;
+  public scenarios: Array<Scenario> = new Array<Scenario>();
 
-  public current_choice: number = 1;
-  public readonly number_of_choices: number = 10;
+  public choice_index: number = 1;
+  public offset: number = 0;
+  public number_of_choices: number = 10;
 
   choice1_desc: String = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget erat finibus, fringilla purus sed, gravida mi. Vivamus rhoncus turpis vel urna sodales vulputate. Etiam dolor elit, tristique non vestibulum sed, tincidunt et orci. Nulla et dui ac justo mollis scelerisque. Vestibulum a augue in est rutrum luctus. Sed volutpat in mauris sed sodales. Proin vel ipsum risus. Nunc mollis convallis ipsum, vitae ornare est suscipit vel. Phasellus mattis ut velit id viverra.\n" +
     "\n" +
@@ -29,7 +31,12 @@ export class JudgeComponent implements OnInit {
     "\n" +
     "Suspendisse varius lectus elit, quis mollis quam convallis nec. Suspendisse libero nisi, ullamcorper vel iaculis vel, bibendum ut odio. Praesent scelerisque lorem quis leo vehicula, euismod vulputate nunc consequat. Suspendisse tempus commodo risus id pretium. Donec rhoncus gravida ex at tincidunt. Etiam ut cursus enim. Phasellus sed augue a lectus suscipit maximus id eu mauris. Proin ultrices blandit nisi, at congue augue cursus a. In viverra pulvinar tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non facilisis eros. Aenean vitae sollicitudin risus, at lobortis mauris. Curabitur a lectus pellentesque, vestibulum diam nec, tempus sapien. Donec ultrices nisl erat, sit amet condimentum nibh placerat ac. "
 
-  constructor(private sessionStorage: SessionService) { }
+  constructor(private sessionService: SessionService) {
+    this.sessionService.number_of_choices$.subscribe(n => this.number_of_choices = n);
+    this.sessionService.choice_index$.subscribe(n => this.choice_index = n+1);
+    this.sessionService.scenarios$.subscribe(scenarios => this.scenarios = scenarios);
+    this.sessionService.offset$.subscribe(o => this.offset = o);
+  }
 
   ngOnInit(): void {
   }
@@ -39,7 +46,18 @@ export class JudgeComponent implements OnInit {
   }
 
   public select(which: boolean): void {
-    this.sessionStorage.pushChoice(this.current_choice, which);
+    this.sessionService.pushChoice(this.choice_index - this.offset - 1, which);
+    console.dir(sessionStorage)
+    if (this.choice_index == 10) return;
+    this.offset ? this.sessionService.lessOffset() : this.sessionService.nextScenario();
+  }
+
+  public back() {
+    if (this.offset < this.choice_index - 1) this.sessionService.moreOffset();
+  }
+
+  public forth() {
+    if (this.offset >= 0) this.sessionService.lessOffset();
   }
 
 }

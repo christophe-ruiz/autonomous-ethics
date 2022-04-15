@@ -12,6 +12,6 @@ module.exports = new BaseModel('Statistics', {
         income_bracket: Joi.array().items(Joi.string().valid(...salary_brackets)
         ).required(),
         countries: Joi.array().items(Joi.string().valid(...countries)),
-        sessions: Joi.array().items(Scenario.get_schema()).required()
+        sessions: Joi.object(Scenario.get_schema()).required()
     })
 })

@@ -2,14 +2,20 @@
   <div id="choices">
     <div id="left">
       <app-tile></app-tile>
-      <button (click)="select(false)">Choice 1</button>
+      <div class="actions">
+        <button (click)="select(false)">Choice 1</button>
+        <button *ngIf="this.choice_index > 1" (click)="back()" class="move back">&#8592; Go back</button>
+      </div>
       <p class="description" #desc >{{choice1_desc}}</p>
     </div>
-    <span id="counter">{{current_choice}}/{{number_of_choices}}</span>
+    <span id="counter">{{choice_index - offset}}/{{number_of_choices}}</span>
     <span class="desc-title" (click)="scroll(desc)">&#8595; Full descriptions &#8595;</span>
     <div id="right">
       <app-tile></app-tile>
-      <button (click)="select(true)">Choice 2</button>
+      <div class="actions">
+        <button (click)="select(true)">Choice 2</button>
+        <button *ngIf="this.offset" (click)="forth()" class="move forth">Go forth &#8594;</button>
+      </div>
       <p class="description" >{{choice2_desc}}</p>
     </div>
   </div>
