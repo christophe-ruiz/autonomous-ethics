@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { TileComponent } from './tile/tile.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { ScenarioCharacterChooserComponent } from './scenario/scenario-character-chooser/scenario-character-chooser.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { ScenarioCharacterChooserComponent } from './scenario/scenario-character
     FooterComponent,
     TileComponent,
     StatisticsComponent,
-    ScenarioCharacterChooserComponent
+    ScenarioCharacterChooserComponent,
+    UserProfileComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

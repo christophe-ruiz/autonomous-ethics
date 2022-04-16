@@ -8,26 +8,25 @@ salary_brackets = [
     '$50,001 - $85,000',
     '$80,001 - $100,000',
     'Over $100,000',
-]
+];
 
 genders = [
     'Male',
     'Female',
     'Other',
     'I prefer not to say'
-]
+];
 
 education_levels = [
-    'Under $5,000',
-    '$5,000 - $10,000',
-    '$10,001 - $15,000',
-    '$15,001 - $25,000',
-    '$25,001 - $35,000',
-    '$35,001 - $50,000',
-    '$50,001 - $85,000',
-    '$80,001 - $100,000',
-    'Over $100,000',
-]
+    'Less than a high school diploma',
+    'High school diploma',
+    'Vocational training',
+    'Attended college',
+    'Associate degree',
+    'Bachelor degree',
+    'Graduate degree',
+    'Other',
+];
 
 countries = [
     "United States",
@@ -271,9 +270,36 @@ countries = [
     "Zimbabwe"
 ]
 
+politics = [
+    'Far left',
+    'Left wing',
+    'Moderate left',
+    'Centrist',
+    'Moderate right',
+    'Right wing',
+    'Far right'
+]
+
+religions = [
+    "Christianity",
+    "Islam",
+    "Atheism",
+    "Hinduism",
+    "Buddhism",
+    "Chinese folk religion",
+    "Sikhism",
+    "Judaism",
+    "Baháʼí",
+    "Jainism",
+    "Shinto",
+    "Other",
+]
+
 module.exports = {
     salary_brackets: salary_brackets,
     genders: genders,
     education_levels: education_levels,
-    countries: countries
+    countries: countries,
+    politics: politics,
+    religions: religions,
 }

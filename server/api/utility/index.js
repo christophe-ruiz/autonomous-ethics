@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const {countries, salary_brackets, genders, education_levels} = require("../../utils/constant-strings");
+const {countries, salary_brackets, genders, education_levels, politics, religions} = require("../../utils/constant-strings");
 
 const router = new Router({ mergeParams: true })
 
@@ -30,6 +30,22 @@ router.get('/genders', (req, res) => {
 router.get('/education_levels', (req, res) => {
     try {
         res.status(200).json(education_levels)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
+router.get('/political_compass', (req, res) => {
+    try {
+        res.status(200).json(politics)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
+router.get('/religions', (req, res) => {
+    try {
+        res.status(200).json(religions)
     } catch (err) {
         res.status(500).json(err)
     }

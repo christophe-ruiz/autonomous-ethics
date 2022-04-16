@@ -1,0 +1,32 @@
+<main>
+  <h1>User profile</h1>
+  <span>Please, fill in your informations for statistics purposes</span>
+  <form [formGroup]="userProfileForm" enctype="multipart/form-data">
+    <label for="age">Age</label>
+    <input formControlName="age" name="age" id="age" type="number" min="0" [defaultValue]="0">
+
+    <label for="gender">Gender</label>
+    <select formControlName="gender" name="gender" id="gender">
+      <option *ngFor="let g of this.genders" value="{{g}}">{{g}}</option>
+    </select>
+
+    <label for="religion">Religion</label>
+    <select formControlName="religion" name="religion" id="religion">
+      <option *ngFor="let r of this.religions" value="{{r}}">{{r}}</option>
+    </select>
+
+    <label for="politics">Political orientation</label>
+    <select formControlName="politics" name="politics" id="politics">
+      <option *ngFor="let p of this.political_orientations" value="{{p}}">{{p}}</option>
+    </select>
+
+    <label for="education">Highest level of education</label>
+    <select formControlName="education" name="education" id="education">
+      <option *ngFor="let e of this.education" value="{{e}}">{{e}}</option>
+    </select>
+
+    <label for="income">Annual income, including tips, dividends, interests, etc... (in US Dollars)</label>
+
+    <label for="country">Country</label>
+  </form>
+</main>

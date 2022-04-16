@@ -47,7 +47,7 @@ export class JudgeComponent implements OnInit {
 
   public select(which: boolean): void {
     this.sessionService.pushChoice(this.choice_index - this.offset - 1, which);
-    console.dir(sessionStorage)
+    console.dir(sessionStorage);
     if (this.choice_index == 10) return;
     this.offset ? this.sessionService.lessOffset() : this.sessionService.nextScenario();
   }
