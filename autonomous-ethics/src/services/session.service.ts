@@ -12,7 +12,7 @@ export class SessionService {
   public choice_index$ : BehaviorSubject<number> = new BehaviorSubject<number>(0);
   public number_of_choices$ : BehaviorSubject<number> = new BehaviorSubject<number>(10);
   public offset$ : BehaviorSubject<number> = new BehaviorSubject<number>(0);
-  private choices$ : BehaviorSubject<Array<boolean>> = new BehaviorSubject<Array<boolean>>(Array<boolean>(this.number_of_choices$.getValue()));
+  public choices$ : BehaviorSubject<Array<boolean>> = new BehaviorSubject<Array<boolean>>(Array<boolean>(this.number_of_choices$.getValue()));
 
   public scenarios$ : BehaviorSubject<Array<Scenario>> = new BehaviorSubject<Array<Scenario>>(Array<Scenario>(this.number_of_choices$.getValue()));
   public scenario$ : Subject<Scenario> = new Subject<Scenario>();

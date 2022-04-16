@@ -11,7 +11,7 @@ export class ConstantStringsService {
   private gendersUrl = this.constantStringsUrl + 'genders/'
   private religionsUrl = this.constantStringsUrl + 'religions/'
   private politicsUrl = this.constantStringsUrl + 'political_compass/'
-  private educationUrl = this.constantStringsUrl + 'education/'
+  private educationUrl = this.constantStringsUrl + 'education_levels/'
   private incomeUrl = this.constantStringsUrl + 'salary_brackets/'
   private countryUrl = this.constantStringsUrl + 'countries/'
 

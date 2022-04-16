@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SessionService} from "../../services/session.service";
 import {Scenario} from "../../models/scenario";
+import {UserProfileService} from '../../services/user-profile.service';
 
 @Component({
   selector: 'app-judge',
@@ -31,11 +32,15 @@ export class JudgeComponent implements OnInit {
     "\n" +
     "Suspendisse varius lectus elit, quis mollis quam convallis nec. Suspendisse libero nisi, ullamcorper vel iaculis vel, bibendum ut odio. Praesent scelerisque lorem quis leo vehicula, euismod vulputate nunc consequat. Suspendisse tempus commodo risus id pretium. Donec rhoncus gravida ex at tincidunt. Etiam ut cursus enim. Phasellus sed augue a lectus suscipit maximus id eu mauris. Proin ultrices blandit nisi, at congue augue cursus a. In viverra pulvinar tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non facilisis eros. Aenean vitae sollicitudin risus, at lobortis mauris. Curabitur a lectus pellentesque, vestibulum diam nec, tempus sapien. Donec ultrices nisl erat, sit amet condimentum nibh placerat ac. "
 
-  constructor(private sessionService: SessionService) {
+  constructor(
+    private sessionService: SessionService,
+    private userProfileService: UserProfileService,
+  ) {
     this.sessionService.number_of_choices$.subscribe(n => this.number_of_choices = n);
     this.sessionService.choice_index$.subscribe(n => this.choice_index = n+1);
     this.sessionService.scenarios$.subscribe(scenarios => this.scenarios = scenarios);
     this.sessionService.offset$.subscribe(o => this.offset = o);
+    console.log(sessionStorage)
   }
 
   ngOnInit(): void {
@@ -48,7 +53,10 @@ export class JudgeComponent implements OnInit {
   public select(which: boolean): void {
     this.sessionService.pushChoice(this.choice_index - this.offset - 1, which);
     console.dir(sessionStorage);
-    if (this.choice_index == 10) return;
+    if (this.choice_index == 10) this.userProfileService.storeSession({
+      choices: this.sessionService.choices$.getValue(),
+      scenarios: this.sessionService.scenarios$.getValue()
+    });
     this.offset ? this.sessionService.lessOffset() : this.sessionService.nextScenario();
   }
 

@@ -4,7 +4,7 @@
       <app-tile></app-tile>
       <div class="actions">
         <button (click)="select(false)">Choice 1</button>
-        <button *ngIf="this.choice_index > 1" (click)="back()" class="move back">&#8592; Go back</button>
+        <button *ngIf="this.choice_index - this.offset > 1" (click)="back()" class="move back">&#8592; Go back</button>
       </div>
       <p class="description" #desc >{{choice1_desc}}</p>
     </div>

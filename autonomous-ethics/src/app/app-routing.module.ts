@@ -8,10 +8,10 @@ import {UserProfileService} from '../services/user-profile.service';
 import {UserProfileComponent} from './user-profile/user-profile.component';
 
 const routes: Routes = [
-  { path: '', component:JudgeComponent },
+  { path: '', redirectTo:'judge', pathMatch:'prefix' },
   { path: 'informations', component:InformationsComponent },
   { path: 'user-profile', component:UserProfileComponent },
-  { path: 'judge', component:JudgeComponent, canActivate:[UserProfileService] },
+  { path: 'judge', component:JudgeComponent, canActivate:[UserProfileService,] },
   { path: 'create', component:ScenarioComponent },
   { path: 'statistics', component:StatisticsComponent },
   { path: '**', redirectTo:'' },
