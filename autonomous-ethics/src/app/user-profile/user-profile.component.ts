@@ -14,6 +14,8 @@ export class UserProfileComponent implements OnInit {
   public religions : String[] = [];
   public political_orientations : String[] = [];
   public education : String[] = [];
+  public income : String[] = [];
+  public countries : String[] = [];
 
   public userProfileForm : FormGroup = this.fb.group({
     age: [Validators.required, Validators.min(0)],
@@ -35,7 +37,9 @@ export class UserProfileComponent implements OnInit {
     this.constants.genders$.subscribe(g => this.genders = g);
     this.constants.religions$.subscribe(r => this.religions = r);
     this.constants.politics$.subscribe(p => this.political_orientations = p);
-    this.constants.politics$.subscribe(p => this.political_orientations = p);
+    this.constants.education$.subscribe(e => this.education = e);
+    this.constants.income$.subscribe(i => this.income = i);
+    this.constants.countries$.subscribe(c => this.countries = c);
   }
 
   ngOnInit(): void {

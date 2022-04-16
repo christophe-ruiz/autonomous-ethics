@@ -102,7 +102,6 @@ countries = [
     "Fiji",
     "Finland",
     "France",
-    "France, Metropolitan",
     "French Guiana",
     "French Polynesia",
     "French Southern Territories",

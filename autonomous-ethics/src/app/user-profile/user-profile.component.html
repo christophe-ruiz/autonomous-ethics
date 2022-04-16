@@ -26,7 +26,13 @@
     </select>
 
     <label for="income">Annual income, including tips, dividends, interests, etc... (in US Dollars)</label>
+    <select formControlName="income" name="income" id="income">
+      <option *ngFor="let i of this.income" value="{{i}}">{{i}}</option>
+    </select>
 
     <label for="country">Country</label>
+    <select formControlName="country" name="country" id="country">
+      <option *ngFor="let c of this.countries" value="{{c}}">{{c}}</option>
+    </select>
   </form>
 </main>
