@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CharacterService} from "../../../services/character.service";
 import {Character} from "../../../models/character";
 import {serverUrl} from "../../../configs/server.config";
@@ -10,7 +10,12 @@ import {serverUrl} from "../../../configs/server.config";
 })
 export class ScenarioCharacterChooserComponent implements OnInit {
   public characters: Character[] = [];
+
+  @Input()
   public selectedCharacters: Character[] = [];
+  @Output()
+  public selectedCharactersChange: EventEmitter<Character[]> = new EventEmitter<Character[]>();
+
   @Input() isForLights: boolean = false;
 
   readonly serverUrl: string = serverUrl;
@@ -26,12 +31,15 @@ export class ScenarioCharacterChooserComponent implements OnInit {
   }
 
   addCharacter(c: Character): void {
-    if (this.selectedCharacters.length < 5)
+    if (this.selectedCharacters.length < 5) {
       this.selectedCharacters.push(c);
+      this.selectedCharactersChange.emit(this.selectedCharacters);
+    }
   }
 
   removeCharacter(c: Character): void {
     this.selectedCharacters = this.removeItemOnce(this.selectedCharacters, c);
+    this.selectedCharactersChange.emit(this.selectedCharacters);
   }
 
   removeItemOnce(arr: Character[], value: Character): Character[] {

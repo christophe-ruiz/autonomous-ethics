@@ -1,1 +1,135 @@
-[]
+[
+  {
+    "id": 0,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 3,
+        "image": "3.png",
+        "name": "Boy",
+        "sex": false,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 2,
+        "image": "2.png",
+        "name": "Executive female",
+        "sex": true,
+        "special": {
+          "isExecutive": true
+        }
+      },
+      {
+        "id": 2,
+        "image": "2.png",
+        "name": "Executive female",
+        "sex": true,
+        "special": {
+          "isExecutive": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 1,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 3,
+        "image": "3.png",
+        "name": "Boy",
+        "sex": false,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 9,
+        "image": "9.png",
+        "name": "Male criminal",
+        "sex": false,
+        "special": {
+          "isCriminal": true
+        }
+      },
+      {
+        "id": 10,
+        "image": "10.png",
+        "name": "Female criminal",
+        "sex": true,
+        "special": {
+          "isCriminal": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 9,
+        "image": "9.png",
+        "name": "Male criminal",
+        "sex": false,
+        "special": {
+          "isCriminal": true
+        }
+      },
+      {
+        "id": 9,
+        "image": "9.png",
+        "name": "Male criminal",
+        "sex": false,
+        "special": {
+          "isCriminal": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  }
+]

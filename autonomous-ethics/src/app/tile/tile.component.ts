@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-tile',
@@ -7,11 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TileComponent implements OnInit {
 
+  @Input()
+  public type: String = "";
+  public road: String = "";
+
   constructor() {
 
   }
 
   ngOnInit(): void {
+    this.road = "road-" + this.type + ".png";
   }
 
 }

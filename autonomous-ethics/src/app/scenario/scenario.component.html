@@ -1,23 +1,28 @@
 <main>
   <div id="car">
     <h1>Car occupants</h1>
-    <app-scenario-character-chooser></app-scenario-character-chooser>
+    <app-scenario-character-chooser [(selectedCharacters)]="characters.car_occupants"></app-scenario-character-chooser>
   </div>
   <div id="crosswalks">
     <div class="side">
       <h1>Top side</h1>
       <h2>Lights</h2>
-      <button class="light-checkbox" (click)="useSwitch(false)">{{isOn(false)}}</button>
+      <button [ngClass]="isOn(false)==='ON' ? 'green' : 'red'" class="light-checkbox" (click)="useSwitch(false)">{{isOn(false)}}</button>
+      <p class="light-description">{{isOn(false)==='ON' ? light_description.ON : light_description.OFF }}</p>
       <div class="lights"></div>
       <h2>Pedestrians</h2>
-      <app-scenario-character-chooser [isForLights]="true"></app-scenario-character-chooser>
+      <app-scenario-character-chooser [(selectedCharacters)]="characters.left" [isForLights]="true"></app-scenario-character-chooser>
     </div>
+
     <div class="side">
       <h1>Bottom side</h1>
       <h2>Lights</h2>
+      <button [ngClass]="isOn(true)==='ON' ? 'green' : 'red'" class="light-checkbox" (click)="useSwitch(true)">{{isOn(true)}}</button>
+      <p class="light-description">{{isOn(true)==='ON' ? light_description.ON : light_description.OFF}}</p>
       <div class="lights"></div>
       <h2>Pedestrians</h2>
-      <app-scenario-character-chooser [isForLights]="true"></app-scenario-character-chooser>
+      <app-scenario-character-chooser [(selectedCharacters)]="characters.right" [isForLights]="true"></app-scenario-character-chooser>
     </div>
+    <button id="submit" (click)="submit()">Submit</button>
   </div>
 </main>

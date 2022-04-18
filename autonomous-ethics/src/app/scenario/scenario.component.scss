@@ -6,9 +6,18 @@ main {
   user-select: none;
 }
 
+.light-description {
+  font-size: 1vw;
+}
+
 .light-checkbox {
   padding: 0.5vw 1vw;
   font-size: 1vw;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 4vw;
 }
 
 #car, #crosswalks {
@@ -28,4 +37,32 @@ h2 {
 
 #car {
   border-right: 4px solid var(--black);
+}
+
+.green {
+  background: #87baab;
+}
+
+.red {
+  background: var(--red);
+}
+
+#submit {
+  padding: 1vw 2vw;
+  border: 1px solid white;
+  border-radius: 5px;
+
+  margin-top: 2vw;
+
+  cursor: pointer;
+  background: #87baab;
+  font-size: 2vw;
+  color: white;
+
+  transition: 0.2s;
+}
+
+#submit:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
 }
