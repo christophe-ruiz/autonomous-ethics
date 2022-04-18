@@ -46,11 +46,14 @@ export class UserProfileComponent implements OnInit {
     this.constants.education$.subscribe(e => this.education = e);
     this.constants.income$.subscribe(i => this.income = i);
     this.constants.countries$.subscribe(c => this.countries = c);
-
-    document.body.style.backgroundColor = "var(--black)";
   }
 
   ngOnInit(): void {
+    document.body.style.backgroundColor = "var(--black)";
+  }
+
+  ngOnDestroy(): void {
+    document.body.style.backgroundColor = "white";
   }
 
   submitForm() : void {
@@ -66,10 +69,10 @@ export class UserProfileComponent implements OnInit {
     this.userProfileFormData.set('income', this.userProfileForm.get('income')!.value);
     this.userProfileFormData.set('country', this.userProfileForm.get('country')!.value);
 
-    if (this.userProfileService.storeUser(this.userProfileFormData)) this.go();
+    if (this.userProfileService.storeUser(this.userProfileFormData)) this.letsJudge();
   }
 
-  go() {
+  letsJudge() {
     this.router.navigate(['/judge']);
   }
 }

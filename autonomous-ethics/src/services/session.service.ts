@@ -9,9 +9,13 @@ import {StorageService} from "./storage.service";
 })
 export class SessionService {
 
-  public choice_index$ : BehaviorSubject<number> = new BehaviorSubject<number>(0);
-  public number_of_choices$ : BehaviorSubject<number> = new BehaviorSubject<number>(10);
-  public offset$ : BehaviorSubject<number> = new BehaviorSubject<number>(0);
+  private readonly DEFAULT_OFFSET = 0;
+  private readonly DEFAULT_INDEX = 0;
+  private readonly DEFAULT_NUMBER_OF_CHOICES = 10;
+
+  public choice_index$ : BehaviorSubject<number> = new BehaviorSubject<number>(this.DEFAULT_INDEX);
+  public number_of_choices$ : BehaviorSubject<number> = new BehaviorSubject<number>(this.DEFAULT_NUMBER_OF_CHOICES);
+  public offset$ : BehaviorSubject<number> = new BehaviorSubject<number>(this.DEFAULT_OFFSET);
   public choices$ : BehaviorSubject<Array<boolean>> = new BehaviorSubject<Array<boolean>>(Array<boolean>(this.number_of_choices$.getValue()));
 
   public scenarios$ : BehaviorSubject<Array<Scenario>> = new BehaviorSubject<Array<Scenario>>(Array<Scenario>(this.number_of_choices$.getValue()));
@@ -42,5 +46,15 @@ export class SessionService {
 
   lessOffset() :void {
     this.offset$.next(this.offset$.value - 1);
+  }
+
+  deleteStats(): void {
+    this.storageService.remove('user');
+    this.storageService.remove('session');
+    this.storageService.remove('choices');
+
+    this.offset$.next(this.DEFAULT_OFFSET);
+    this.number_of_choices$.next(this.DEFAULT_NUMBER_OF_CHOICES);
+    this.choice_index$.next(this.DEFAULT_INDEX);
   }
 }

@@ -4,6 +4,8 @@
   </div>
   <div id="visualizer">
     <img *ngIf="!isForLights" id="car" src="assets/img/car.png" alt="Autonomous vehicule">
-    <img class="characters" (click)="removeCharacter(c)" *ngFor="let c of selectedCharacters" src="{{this.serverUrl + 'characters/images/' + c.image}}">
+    <div id="car-occupants">
+      <img class="car-occupants-characters" (click)="removeCharacter(c)" *ngFor="let c of selectedCharacters" src="{{this.serverUrl + 'characters/images/' + c.image}}">
+    </div>
   </div>
 </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {SessionService} from "../../services/session.service";
 import {Scenario} from "../../models/scenario";
 import {UserProfileService} from '../../services/user-profile.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-judge',
@@ -35,12 +36,12 @@ export class JudgeComponent implements OnInit {
   constructor(
     private sessionService: SessionService,
     private userProfileService: UserProfileService,
+    private router: Router,
   ) {
     this.sessionService.number_of_choices$.subscribe(n => this.number_of_choices = n);
     this.sessionService.choice_index$.subscribe(n => this.choice_index = n+1);
     this.sessionService.scenarios$.subscribe(scenarios => this.scenarios = scenarios);
     this.sessionService.offset$.subscribe(o => this.offset = o);
-    console.log(sessionStorage)
   }
 
   ngOnInit(): void {
@@ -52,12 +53,14 @@ export class JudgeComponent implements OnInit {
 
   public select(which: boolean): void {
     this.sessionService.pushChoice(this.choice_index - this.offset - 1, which);
-    console.dir(sessionStorage);
-    if (this.choice_index == 10) this.userProfileService.storeSession({
-      choices: this.sessionService.choices$.getValue(),
-      scenarios: this.sessionService.scenarios$.getValue()
-    });
-    this.offset ? this.sessionService.lessOffset() : this.sessionService.nextScenario();
+    if (this.choice_index == 10) {
+      this.userProfileService.storeSession({
+        choices: this.sessionService.choices$.getValue(),
+        scenarios: this.sessionService.scenarios$.getValue()
+      });
+      this.router.navigate(['/sumup']);
+    }
+    else this.offset ? this.sessionService.lessOffset() : this.sessionService.nextScenario();
   }
 
   public back() {

@@ -13,6 +13,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { ScenarioCharacterChooserComponent } from './scenario/scenario-character-chooser/scenario-character-chooser.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { SumupComponent } from './sumup/sumup.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     TileComponent,
     StatisticsComponent,
     ScenarioCharacterChooserComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    SumupComponent
   ],
     imports: [
         BrowserModule,

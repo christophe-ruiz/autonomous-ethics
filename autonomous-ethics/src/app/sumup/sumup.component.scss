@@ -1,0 +1,63 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  font-family: "Product Sans", sans-serif;
+}
+
+body {
+  background-color: var(--black);
+}
+
+h1 {
+  font-size: 3vw;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1.25vw;
+}
+
+#actions {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#actions > span {
+  text-decoration: underline;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+#actions > button {
+  cursor: pointer;
+  user-select: none;
+  font-size: 2vw;
+  padding: 0.5vw 1.5vw;
+  margin-top: 0.5vw;
+  background: #87baab;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+
+  transition: 0.2s;
+}
+
+#actions > button:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+#stats-container {
+  display: flex;
+  flex-direction: column;
+}

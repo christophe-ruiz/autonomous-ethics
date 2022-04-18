@@ -6,6 +6,7 @@ import {ScenarioComponent} from "./scenario/scenario.component";
 import {StatisticsComponent} from "./statistics/statistics.component";
 import {UserProfileService} from '../services/user-profile.service';
 import {UserProfileComponent} from './user-profile/user-profile.component';
+import {SumupComponent} from './sumup/sumup.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'judge', pathMatch:'prefix' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'judge', component:JudgeComponent, canActivate:[UserProfileService,] },
   { path: 'create', component:ScenarioComponent },
   { path: 'statistics', component:StatisticsComponent },
+  { path: 'sumup', component:SumupComponent },
   { path: '**', redirectTo:'' },
 ];
 

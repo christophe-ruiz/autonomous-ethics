@@ -11,6 +11,20 @@
   overflow-y: hidden;
 }
 
+#list {
+  display: flex;
+  width: 40vw;
+}
+
+#car-occupants {
+  width: 100%;
+  display: flex;
+}
+
+.car-occupants-characters {
+  height: 6vw;
+}
+
 #chooser {
   user-select: none;
 }

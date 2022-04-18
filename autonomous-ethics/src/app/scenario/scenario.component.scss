@@ -6,6 +6,11 @@ main {
   user-select: none;
 }
 
+.light-checkbox {
+  padding: 0.5vw 1vw;
+  font-size: 1vw;
+}
+
 #car, #crosswalks {
   display: flex;
   flex-direction: column;

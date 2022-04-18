@@ -7,6 +7,7 @@
     <div class="side">
       <h1>Top side</h1>
       <h2>Lights</h2>
+      <button class="light-checkbox" (click)="useSwitch(false)">{{isOn(false)}}</button>
       <div class="lights"></div>
       <h2>Pedestrians</h2>
       <app-scenario-character-chooser [isForLights]="true"></app-scenario-character-chooser>

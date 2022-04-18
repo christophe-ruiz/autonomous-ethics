@@ -1,10 +1,221 @@
 [
   {
+    "id": 1,
+    "image":  "1.png",
+    "name": "Executive male",
+    "sex": false,
+    "special": {
+      "isExecutive": true
+    }
+  },
+  {
+    "id": 2,
+    "image":  "2.png",
+    "name": "Executive female",
+    "sex": true,
+    "special": {
+      "isExecutive": true
+    }
+  },
+  {
+    "id": 3,
+    "image":  "3.png",
+    "name": "Boy",
+    "sex": false,
+    "special": {
+      "isYoung": true
+    }
+  },
+  {
+    "id": 4,
+    "image":  "4.png",
+    "name": "Girl",
+    "sex": true,
+    "special": {
+      "isYoung": true
+    }
+  },
+  {
+    "id": 5,
+    "image":  "5.png",
+    "name": "Male",
+    "sex": false
+  },
+  {
+    "id": 6,
+    "image":  "6.png",
+    "name": "Female",
+    "sex": true
+  },
+  {
     "id": 7,
-    "image":  "7.png"
+    "image":  "7.png",
+    "name": "Male celebrity",
+    "sex": false,
+    "special": {
+      "isCelebrity": true
+    }
   },
   {
     "id": 8,
-    "image":  "8.png"
+    "image":  "8.png",
+    "name": "Female celebrity",
+    "sex": true,
+    "special": {
+      "isCelebrity": true
+    }
+  },
+  {
+    "id": 9,
+    "image":  "9.png",
+    "name": "Male criminal",
+    "sex": false,
+    "special": {
+      "isCriminal": true
+    }
+  },
+  {
+    "id": 10,
+    "image":  "10.png",
+    "name": "Female criminal",
+    "sex": true,
+    "special": {
+      "isCriminal": true
+    }
+  },
+  {
+    "id": 11,
+    "image":  "11.png",
+    "name": "Fat male",
+    "sex": false,
+    "special": {
+      "isFat": true
+    }
+  },
+  {
+    "id": 12,
+    "image":  "12.png",
+    "name": "Fat female",
+    "sex": true,
+    "special": {
+      "isFat": true
+    }
+  },
+  {
+    "id": 13,
+    "image":  "13.png",
+    "name": "Male medic",
+    "sex": false,
+    "special": {
+      "isMedic": true
+    }
+  },
+  {
+    "id": 14,
+    "image":  "14.png",
+    "name": "Female medic",
+    "sex": true,
+    "special": {
+      "isMedic": true
+    }
+  },
+  {
+    "id": 15,
+    "image":  "15.png",
+    "name": "Male homeless",
+    "sex": false,
+    "special": {
+      "isHomeless": true
+    }
+  },
+  {
+    "id": 16,
+    "image":  "16.png",
+    "name": "Female homeless",
+    "sex": true,
+    "special": {
+      "isHomeless": true
+    }
+  },
+  {
+    "id": 17,
+    "image":  "17.png",
+    "name": "Fit male",
+    "sex": false,
+    "special": {
+      "isFit": true
+    }
+  },
+  {
+    "id": 18,
+    "image":  "18.png",
+    "name": "Fit female",
+    "sex": true,
+    "special": {
+      "isFit": true
+    }
+  },
+  {
+    "id": 19,
+    "image":  "19.png",
+    "name": "Old male",
+    "sex": false,
+    "special": {
+      "isOld": true
+    }
+  },
+  {
+    "id": 20,
+    "image":  "20.png",
+    "name": "Old female",
+    "sex": true,
+    "special": {
+      "isOld": true
+    }
+  },
+  {
+    "id": 21,
+    "image":  "21.png",
+    "name": "Pregnant female",
+    "sex": true,
+    "special": {
+      "isPregnant": true
+    }
+  },
+  {
+    "id": 22,
+    "image":  "22.png",
+    "name": "Dog",
+    "sex": false,
+    "special": {
+      "isAnimal": true
+    }
+  },
+  {
+    "id": 23,
+    "image":  "23.png",
+    "name": "Cat",
+    "sex": false,
+    "special": {
+      "isAnimal": true
+    }
+  },
+  {
+    "id": 24,
+    "image":  "24.png",
+    "name": "Sheep",
+    "sex": false,
+    "special": {
+      "isAnimal": true
+    }
+  },
+  {
+    "id": 25,
+    "image":  "25.png",
+    "name": "Cow",
+    "sex": false,
+    "special": {
+      "isAnimal": true
+    }
   }
 ]
