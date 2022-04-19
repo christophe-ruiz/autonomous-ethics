@@ -10,6 +10,34 @@
   user-select: none;
 }
 
+#choices {
+  position: absolute;
+  z-index: 20;
+}
+
+#choices > div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 12vw;
+}
+
+#car_occupants{
+  left: 4vw;
+  top: 3vw;
+}
+
+#left_choice {
+  left: 32vw;
+  top: -7vw;
+}
+
+#right_choice {
+  left: 32vw;
+  top: 3vw;
+}
+
 #road {
   height: 100%;
   position: relative;
@@ -18,8 +46,12 @@
 
 #car {
   position: absolute;
-  width: 12vw;
+  width: 18vw;
   margin-left: 1.5vw;
   align-self: end;
-  margin-bottom: 4vw;
+  margin-bottom: 5vw;
+}
+
+.characters {
+  width: 4vw;
 }

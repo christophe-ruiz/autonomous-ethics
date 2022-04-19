@@ -1,7 +1,7 @@
 <main>
   <div id="choices">
     <div id="left">
-      <app-tile [type]="'straight'"></app-tile>
+      <app-tile [scenario]="scenario" [type]="'straight'"></app-tile>
       <div class="actions">
         <button (click)="select(false)">Choice 1</button>
         <button *ngIf="this.choice_index - this.offset > 1" (click)="back()" class="move back">&#8592; Go back</button>
@@ -13,7 +13,7 @@
     <span class="desc-title" (click)="scroll(desc)">&#8595; Full descriptions &#8595;</span>
 
     <div id="right">
-      <app-tile [type]="'swerve'"></app-tile>
+      <app-tile [scenario]="scenario" [type]="'swerve'"></app-tile>
       <div class="actions">
         <button (click)="select(true)">Choice 2</button>
         <button *ngIf="this.offset" (click)="forth()" class="move forth">Go forth &#8594;</button>

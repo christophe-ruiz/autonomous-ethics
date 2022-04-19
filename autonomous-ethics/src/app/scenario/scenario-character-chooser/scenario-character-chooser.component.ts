@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CharacterService} from "../../../services/character.service";
 import {Character} from "../../../models/character";
 import {serverUrl} from "../../../configs/server.config";
+import {ScenarioService} from '../../../services/scenario.service';
 
 @Component({
   selector: 'app-scenario-character-chooser',
@@ -20,7 +21,16 @@ export class ScenarioCharacterChooserComponent implements OnInit {
 
   readonly serverUrl: string = serverUrl;
 
-  constructor(public characterService: CharacterService) {
+  constructor(
+    private characterService: CharacterService,
+    private scenarioService: ScenarioService,
+  ) {
+    this.scenarioService.submitted.subscribe(s => {
+      if(s) {
+        this.selectedCharacters = [];
+        this.scenarioService.submitted.next(false);
+      }
+    })
     if (this.isForLights) {
     } else {
       this.characterService.characters$.subscribe(c => this.characters = c);

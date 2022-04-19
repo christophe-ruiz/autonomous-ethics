@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
 import {SessionService} from "../../services/session.service";
 import {Scenario} from "../../models/scenario";
 import {UserProfileService} from '../../services/user-profile.service';
 import {Router} from '@angular/router';
+import {ScenarioService} from '../../services/scenario.service';
+import {serverUrl} from '../../configs/server.config';
 
 @Component({
   selector: 'app-judge',
@@ -11,40 +13,59 @@ import {Router} from '@angular/router';
 })
 export class JudgeComponent implements OnInit {
 
-  public scenario: Scenario | null = null;
-  public scenarios: Array<Scenario> = new Array<Scenario>();
+  public serverUrl = serverUrl;
 
+  public scenarios: Array<Scenario> = new Array<Scenario>();
   public choice_index: number = 1;
+
   public offset: number = 0;
   public number_of_choices: number = 10;
 
-  choice1_desc: String = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget erat finibus, fringilla purus sed, gravida mi. Vivamus rhoncus turpis vel urna sodales vulputate. Etiam dolor elit, tristique non vestibulum sed, tincidunt et orci. Nulla et dui ac justo mollis scelerisque. Vestibulum a augue in est rutrum luctus. Sed volutpat in mauris sed sodales. Proin vel ipsum risus. Nunc mollis convallis ipsum, vitae ornare est suscipit vel. Phasellus mattis ut velit id viverra.\n" +
-    "\n" +
-    "Cras fringilla aliquet dolor non imperdiet. Nulla facilisi. Suspendisse blandit erat a risus feugiat feugiat. Proin ex diam, viverra dictum dui id, egestas molestie ligula. Nunc congue eu dui eget sagittis. Vivamus a feugiat arcu. Quisque viverra, ligula vitae vehicula eleifend, sapien dui efficitur justo, nec vehicula urna tortor quis quam. Phasellus nec risus quis magna elementum ullamcorper eu sed eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Aliquam id iaculis magna. Pellentesque nulla nunc, pellentesque et viverra pellentesque, luctus eget ex. Suspendisse suscipit id felis auctor vehicula. Vestibulum sodales, libero at tempus hendrerit, felis justo vestibulum est, posuere auctor nisi ipsum ac nisl. Donec interdum volutpat elit vel euismod.\n" +
-    "\n" +
-    "Proin sem erat, finibus sed eros quis, tempor maximus tellus. Vivamus imperdiet, quam at facilisis egestas, arcu leo vestibulum justo, vulputate ullamcorper nisl turpis a elit. Pellentesque dignissim tincidunt urna, sit amet cursus odio blandit vel. Pellentesque tincidunt ipsum eros, sed tincidunt metus malesuada in. Aenean id blandit tortor. Nulla sodales, tellus non ultrices feugiat, sapien purus pulvinar nunc, sit amet auctor nulla orci condimentum elit. Donec hendrerit purus nec urna egestas semper. Integer eget enim in magna vehicula pulvinar nec eget massa. Duis lobortis dictum nibh, id facilisis neque sagittis dapibus. Vivamus hendrerit finibus ornare. Nunc luctus bibendum leo, id cursus augue suscipit non. Nulla pharetra non magna ut ornare. Cras magna nunc, condimentum et malesuada quis, congue et purus. Suspendisse et aliquet nunc, vel interdum tortor.\n" +
-    "\n" +
-    "Suspendisse varius lectus elit, quis mollis quam convallis nec. Suspendisse libero nisi, ullamcorper vel iaculis vel, bibendum ut odio. Praesent scelerisque lorem quis leo vehicula, euismod vulputate nunc consequat. Suspendisse tempus commodo risus id pretium. Donec rhoncus gravida ex at tincidunt. Etiam ut cursus enim. Phasellus sed augue a lectus suscipit maximus id eu mauris. Proin ultrices blandit nisi, at congue augue cursus a. In viverra pulvinar tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non facilisis eros. Aenean vitae sollicitudin risus, at lobortis mauris. Curabitur a lectus pellentesque, vestibulum diam nec, tempus sapien. Donec ultrices nisl erat, sit amet condimentum nibh placerat ac. "
-  choice2_desc: String = " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget erat finibus, fringilla purus sed, gravida mi. Vivamus rhoncus turpis vel urna sodales vulputate. Etiam dolor elit, tristique non vestibulum sed, tincidunt et orci. Nulla et dui ac justo mollis scelerisque. Vestibulum a augue in est rutrum luctus. Sed volutpat in mauris sed sodales. Proin vel ipsum risus. Nunc mollis convallis ipsum, vitae ornare est suscipit vel. Phasellus mattis ut velit id viverra.\n" +
-    "\n" +
-    "Cras fringilla aliquet dolor non imperdiet. Nulla facilisi. Suspendisse blandit erat a risus feugiat feugiat. Proin ex diam, viverra dictum dui id, egestas molestie ligula. Nunc congue eu dui eget sagittis. Vivamus a feugiat arcu. Quisque viverra, ligula vitae vehicula eleifend, sapien dui efficitur justo, nec vehicula urna tortor quis quam. Phasellus nec risus quis magna elementum ullamcorper eu sed eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Aliquam id iaculis magna. Pellentesque nulla nunc, pellentesque et viverra pellentesque, luctus eget ex. Suspendisse suscipit id felis auctor vehicula. Vestibulum sodales, libero at tempus hendrerit, felis justo vestibulum est, posuere auctor nisi ipsum ac nisl. Donec interdum volutpat elit vel euismod.\n" +
-    "\n" +
-    "Proin sem erat, finibus sed eros quis, tempor maximus tellus. Vivamus imperdiet, quam at facilisis egestas, arcu leo vestibulum justo, vulputate ullamcorper nisl turpis a elit. Pellentesque dignissim tincidunt urna, sit amet cursus odio blandit vel. Pellentesque tincidunt ipsum eros, sed tincidunt metus malesuada in. Aenean id blandit tortor. Nulla sodales, tellus non ultrices feugiat, sapien purus pulvinar nunc, sit amet auctor nulla orci condimentum elit. Donec hendrerit purus nec urna egestas semper. Integer eget enim in magna vehicula pulvinar nec eget massa. Duis lobortis dictum nibh, id facilisis neque sagittis dapibus. Vivamus hendrerit finibus ornare. Nunc luctus bibendum leo, id cursus augue suscipit non. Nulla pharetra non magna ut ornare. Cras magna nunc, condimentum et malesuada quis, congue et purus. Suspendisse et aliquet nunc, vel interdum tortor.\n" +
-    "\n" +
-    "Suspendisse varius lectus elit, quis mollis quam convallis nec. Suspendisse libero nisi, ullamcorper vel iaculis vel, bibendum ut odio. Praesent scelerisque lorem quis leo vehicula, euismod vulputate nunc consequat. Suspendisse tempus commodo risus id pretium. Donec rhoncus gravida ex at tincidunt. Etiam ut cursus enim. Phasellus sed augue a lectus suscipit maximus id eu mauris. Proin ultrices blandit nisi, at congue augue cursus a. In viverra pulvinar tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non facilisis eros. Aenean vitae sollicitudin risus, at lobortis mauris. Curabitur a lectus pellentesque, vestibulum diam nec, tempus sapien. Donec ultrices nisl erat, sit amet condimentum nibh placerat ac. "
+  public scenario: Scenario = {
+    id:0,
+    lights: {
+      "left": false,
+      "right": false,
+    },
+    leftside: [],
+    rightside: [],
+    car_occupants: [],
+    description: {
+      left: "",
+      right: ""
+    }
+  };
+
+  choice1_desc !: String;
+  choice2_desc !: String;
 
   constructor(
     private sessionService: SessionService,
     private userProfileService: UserProfileService,
+    private scenarioService: ScenarioService,
     private router: Router,
   ) {
+    this.scenarioService.getScenarios();
+  }
+  ngOnInit(): void {
     this.sessionService.number_of_choices$.subscribe(n => this.number_of_choices = n);
-    this.sessionService.choice_index$.subscribe(n => this.choice_index = n+1);
+    this.sessionService.scenarios$.subscribe(s => this.scenarios = s);
+    this.scenario = this.scenarios[this.choice_index-this.offset-1];
+    this.sessionService.choice_index$.subscribe(n => {
+      this.choice_index = n + 1;
+      this.updateScenario();
+    });
     this.sessionService.scenarios$.subscribe(scenarios => this.scenarios = scenarios);
-    this.sessionService.offset$.subscribe(o => this.offset = o);
+    this.sessionService.offset$.subscribe(o => {
+      this.offset = o;
+      this.updateScenario();
+    });
   }
 
-  ngOnInit(): void {
+  updateScenario() {
+    this.scenario = this.scenarios[this.choice_index-this.offset-1];
+    this.choice1_desc = this.scenario.description.left;
+    this.choice2_desc = this.scenario.description.right;
   }
 
   scroll(el: HTMLElement): void {

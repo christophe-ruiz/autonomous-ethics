@@ -2,7 +2,14 @@
   <img id="road" src="assets/img/{{road}}" alt="Road background">
   <img id="car" src="assets/img/car.png" alt="Autonomous vehicule">
   <div id="choices">
-    <div id="left_choice"></div>
-    <div id="right_choice"></div>
+    <div id="car_occupants">
+      <img class="characters" *ngFor="let c of this.scenario.car_occupants" src="{{this.serverUrl + 'characters/images/' + c.image}}">
+    </div>
+    <div id="left_choice">
+      <img class="characters" *ngFor="let c of this.scenario.leftside" src="{{this.serverUrl + 'characters/images/' + c.image}}">
+    </div>
+    <div id="right_choice">
+      <img class="characters" *ngFor="let c of this.scenario.rightside" src="{{this.serverUrl + 'characters/images/' + c.image}}">
+    </div>
   </div>
 </div>

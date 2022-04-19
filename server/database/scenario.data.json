@@ -131,5 +131,872 @@
       "left": "gauche",
       "right": "droite"
     }
+  },
+  {
+    "id": 2,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 1,
+        "image": "1.png",
+        "name": "Executive male",
+        "sex": false,
+        "special": {
+          "isExecutive": true
+        }
+      },
+      {
+        "id": 2,
+        "image": "2.png",
+        "name": "Executive female",
+        "sex": true,
+        "special": {
+          "isExecutive": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 3,
+        "image": "3.png",
+        "name": "Boy",
+        "sex": false,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 9,
+        "image": "9.png",
+        "name": "Male criminal",
+        "sex": false,
+        "special": {
+          "isCriminal": true
+        }
+      },
+      {
+        "id": 10,
+        "image": "10.png",
+        "name": "Female criminal",
+        "sex": true,
+        "special": {
+          "isCriminal": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 3,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 1,
+        "image": "1.png",
+        "name": "Executive male",
+        "sex": false,
+        "special": {
+          "isExecutive": true
+        }
+      },
+      {
+        "id": 1,
+        "image": "1.png",
+        "name": "Executive male",
+        "sex": false,
+        "special": {
+          "isExecutive": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 5,
+        "image": "5.png",
+        "name": "Male",
+        "sex": false
+      },
+      {
+        "id": 5,
+        "image": "5.png",
+        "name": "Male",
+        "sex": false
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 3,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 9,
+        "image": "9.png",
+        "name": "Male criminal",
+        "sex": false,
+        "special": {
+          "isCriminal": true
+        }
+      },
+      {
+        "id": 9,
+        "image": "9.png",
+        "name": "Male criminal",
+        "sex": false,
+        "special": {
+          "isCriminal": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 13,
+        "image": "13.png",
+        "name": "Male medic",
+        "sex": false,
+        "special": {
+          "isMedic": true
+        }
+      },
+      {
+        "id": 14,
+        "image": "14.png",
+        "name": "Female medic",
+        "sex": true,
+        "special": {
+          "isMedic": true
+        }
+      },
+      {
+        "id": 12,
+        "image": "12.png",
+        "name": "Fat female",
+        "sex": true,
+        "special": {
+          "isFat": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 4,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 8,
+        "image": "8.png",
+        "name": "Female celebrity",
+        "sex": true,
+        "special": {
+          "isCelebrity": true
+        }
+      },
+      {
+        "id": 9,
+        "image": "9.png",
+        "name": "Male criminal",
+        "sex": false,
+        "special": {
+          "isCriminal": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 2,
+        "image": "2.png",
+        "name": "Executive female",
+        "sex": true,
+        "special": {
+          "isExecutive": true
+        }
+      },
+      {
+        "id": 3,
+        "image": "3.png",
+        "name": "Boy",
+        "sex": false,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 15,
+        "image": "15.png",
+        "name": "Male homeless",
+        "sex": false,
+        "special": {
+          "isHomeless": true
+        }
+      },
+      {
+        "id": 12,
+        "image": "12.png",
+        "name": "Fat female",
+        "sex": true,
+        "special": {
+          "isFat": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 5,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 12,
+        "image": "12.png",
+        "name": "Fat female",
+        "sex": true,
+        "special": {
+          "isFat": true
+        }
+      },
+      {
+        "id": 11,
+        "image": "11.png",
+        "name": "Fat male",
+        "sex": false,
+        "special": {
+          "isFat": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 3,
+        "image": "3.png",
+        "name": "Boy",
+        "sex": false,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 19,
+        "image": "19.png",
+        "name": "Old male",
+        "sex": false,
+        "special": {
+          "isOld": true
+        }
+      },
+      {
+        "id": 18,
+        "image": "18.png",
+        "name": "Fit female",
+        "sex": true,
+        "special": {
+          "isFit": true
+        }
+      },
+      {
+        "id": 17,
+        "image": "17.png",
+        "name": "Fit male",
+        "sex": false,
+        "special": {
+          "isFit": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 6,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 12,
+        "image": "12.png",
+        "name": "Fat female",
+        "sex": true,
+        "special": {
+          "isFat": true
+        }
+      },
+      {
+        "id": 11,
+        "image": "11.png",
+        "name": "Fat male",
+        "sex": false,
+        "special": {
+          "isFat": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 19,
+        "image": "19.png",
+        "name": "Old male",
+        "sex": false,
+        "special": {
+          "isOld": true
+        }
+      },
+      {
+        "id": 20,
+        "image": "20.png",
+        "name": "Old female",
+        "sex": true,
+        "special": {
+          "isOld": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 22,
+        "image": "22.png",
+        "name": "Dog",
+        "sex": false,
+        "special": {
+          "isAnimal": true
+        }
+      },
+      {
+        "id": 23,
+        "image": "23.png",
+        "name": "Cat",
+        "sex": false,
+        "special": {
+          "isAnimal": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 7,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 9,
+        "image": "9.png",
+        "name": "Male criminal",
+        "sex": false,
+        "special": {
+          "isCriminal": true
+        }
+      },
+      {
+        "id": 5,
+        "image": "5.png",
+        "name": "Male",
+        "sex": false
+      },
+      {
+        "id": 5,
+        "image": "5.png",
+        "name": "Male",
+        "sex": false
+      }
+    ],
+    "leftside": [
+      {
+        "id": 18,
+        "image": "18.png",
+        "name": "Fit female",
+        "sex": true,
+        "special": {
+          "isFit": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 22,
+        "image": "22.png",
+        "name": "Dog",
+        "sex": false,
+        "special": {
+          "isAnimal": true
+        }
+      },
+      {
+        "id": 20,
+        "image": "20.png",
+        "name": "Old female",
+        "sex": true,
+        "special": {
+          "isOld": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 8,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 6,
+        "image": "6.png",
+        "name": "Female",
+        "sex": true
+      },
+      {
+        "id": 6,
+        "image": "6.png",
+        "name": "Female",
+        "sex": true
+      },
+      {
+        "id": 6,
+        "image": "6.png",
+        "name": "Female",
+        "sex": true
+      }
+    ],
+    "leftside": [
+      {
+        "id": 16,
+        "image": "16.png",
+        "name": "Female homeless",
+        "sex": true,
+        "special": {
+          "isHomeless": true
+        }
+      },
+      {
+        "id": 16,
+        "image": "16.png",
+        "name": "Female homeless",
+        "sex": true,
+        "special": {
+          "isHomeless": true
+        }
+      },
+      {
+        "id": 16,
+        "image": "16.png",
+        "name": "Female homeless",
+        "sex": true,
+        "special": {
+          "isHomeless": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 21,
+        "image": "21.png",
+        "name": "Pregnant female",
+        "sex": true,
+        "special": {
+          "isPregnant": true
+        }
+      },
+      {
+        "id": 21,
+        "image": "21.png",
+        "name": "Pregnant female",
+        "sex": true,
+        "special": {
+          "isPregnant": true
+        }
+      },
+      {
+        "id": 21,
+        "image": "21.png",
+        "name": "Pregnant female",
+        "sex": true,
+        "special": {
+          "isPregnant": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 10,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 3,
+        "image": "3.png",
+        "name": "Boy",
+        "sex": false,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 5,
+        "image": "5.png",
+        "name": "Male",
+        "sex": false
+      }
+    ],
+    "leftside": [
+      {
+        "id": 8,
+        "image": "8.png",
+        "name": "Female celebrity",
+        "sex": true,
+        "special": {
+          "isCelebrity": true
+        }
+      },
+      {
+        "id": 9,
+        "image": "9.png",
+        "name": "Male criminal",
+        "sex": false,
+        "special": {
+          "isCriminal": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 11,
+        "image": "11.png",
+        "name": "Fat male",
+        "sex": false,
+        "special": {
+          "isFat": true
+        }
+      },
+      {
+        "id": 10,
+        "image": "10.png",
+        "name": "Female criminal",
+        "sex": true,
+        "special": {
+          "isCriminal": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 10,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 5,
+        "image": "5.png",
+        "name": "Male",
+        "sex": false
+      },
+      {
+        "id": 5,
+        "image": "5.png",
+        "name": "Male",
+        "sex": false
+      }
+    ],
+    "rightside": [
+      {
+        "id": 10,
+        "image": "10.png",
+        "name": "Female criminal",
+        "sex": true,
+        "special": {
+          "isCriminal": true
+        }
+      },
+      {
+        "id": 10,
+        "image": "10.png",
+        "name": "Female criminal",
+        "sex": true,
+        "special": {
+          "isCriminal": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 12,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 1,
+        "image": "1.png",
+        "name": "Executive male",
+        "sex": false,
+        "special": {
+          "isExecutive": true
+        }
+      },
+      {
+        "id": 1,
+        "image": "1.png",
+        "name": "Executive male",
+        "sex": false,
+        "special": {
+          "isExecutive": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
+  },
+  {
+    "id": 13,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 3,
+        "image": "3.png",
+        "name": "Boy",
+        "sex": false,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 1,
+        "image": "1.png",
+        "name": "Executive male",
+        "sex": false,
+        "special": {
+          "isExecutive": true
+        }
+      },
+      {
+        "id": 2,
+        "image": "2.png",
+        "name": "Executive female",
+        "sex": true,
+        "special": {
+          "isExecutive": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 7,
+        "image": "7.png",
+        "name": "Male celebrity",
+        "sex": false,
+        "special": {
+          "isCelebrity": true
+        }
+      },
+      {
+        "id": 8,
+        "image": "8.png",
+        "name": "Female celebrity",
+        "sex": true,
+        "special": {
+          "isCelebrity": true
+        }
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
   }
 ]

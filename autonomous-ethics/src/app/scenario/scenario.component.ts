@@ -3,6 +3,7 @@ import {ScenarioService} from '../../services/scenario.service';
 import {Character} from '../../models/character';
 import Swal from 'sweetalert2'
 import {Scenario} from '../../models/scenario';
+import {SessionService} from '../../services/session.service';
 
 @Component({
   selector: 'app-scenario',
@@ -39,14 +40,16 @@ export class ScenarioComponent implements OnInit {
 
   constructor(
     private scenarioService: ScenarioService,
-  ) { }
+  ) {
+    this.scenarioService.getScenarios();
+  }
 
   ngOnInit(): void {
   }
 
   submit(): void {
     this.scenarioService.submit({
-      id: this.scenarioService.scenario.length,
+      id: this.scenarioService.scenarios$.getValue().length,
       lights: {
         'left': this.switches.left,
         'right': this.switches.right
@@ -60,6 +63,7 @@ export class ScenarioComponent implements OnInit {
       },
     } as Scenario);
     this.scenarioService.getScenarios();
+    this.scenarioService.submitted.next(true);
   }
 
 }
