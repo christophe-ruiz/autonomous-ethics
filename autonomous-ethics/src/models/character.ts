@@ -1,6 +1,7 @@
 export interface Character {
   id: Number,
   image: String,
+  name: String,
   sex: boolean,
   isYoung: boolean,
   isOld: boolean,

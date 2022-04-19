@@ -1,0 +1,53 @@
+main {
+  font-family: "Product Sans", sans-serif;
+  padding: 1vw 20vw;
+}
+
+#title {
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10vw;
+}
+
+h3 {
+  font-size: 1.25vw;
+}
+
+h1 {
+  font-size: 2vw;
+}
+
+p {
+  font-size: 1.1vw;
+  text-align: justify;
+}
+b {
+  color: var(--violet);
+}
+
+.imaged-paragraph, .character-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+
+.imaged-paragraph > img {
+  width: 30vw;
+}
+
+.imaged-paragraph > p {
+  padding: 1vw 3vw;
+}
+
+.character-image {
+  width: 10vw;
+}
+
+.character-container > p {
+  margin-left: 2vw;
+  font-size: 2vw;
+}
+

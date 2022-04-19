@@ -1,3 +1,50 @@
-<p>informations works!</p>
+<main>
+  <div id="title">
+    <h1>People's opinion gathering system for autonomous vehicles decisions in life-threatening situations</h1>
+    <h3>Christophe RUIZ</h3>
+  </div>
+
+  <h2> What is it ? </h2>
+  <p> The purpose of this website is to collect people's opinion and build statistics to provide information
+  on how certain groups of people would react if they were to choose which lives should be saved in a dangerous
+  situation.</p>
+  <p> The situation described is a sudden break failure on a self-driving car.</p>
+  <p> The user embodies the judge of the situation and has to choose which way to go so the outcome is more
+  acceptable according to the user's opinion.</p>
+
+
+  <h2> How is it useful ? </h2>
+  <p> In my opinion, this kind of devices could be used to prepare the arrival of SAE level 4 and 5 self-driving
+    vehicles on streets. It could help gather people's opinion in order to prepare laws and rules that these
+  vehicles and devices should follow when suffering a critical failure. </p>
+  <p> It can also help identify how certain groups of people value people's life according to their social
+  status.</p>
+
+
+  <h2> How do you use it ?</h2>
+  <p>
+    To provide your opinion to the system you can click the <b>"Start Judging"</b> button in the header.
+  </p>
+  <div class="imaged-paragraph">
+    <p>
+      You will then have to fill in anonymous informations about you in order to correctly link your answers to
+      your social traits.
+    </p>
+    <img alt="Information form" src="assets/img/form.png">
+  </div>
+  <div class="imaged-paragraph">
+    <img alt="Information form" src="assets/img/choice.png">
+    <p>
+      This will allow you to access a session of 10 choices and publish your results to the database.
+    </p>
+  </div>
+
+  <h2> Who are the characters ? </h2>
+  <div class="character-container" *ngFor="let c of characters$.getValue()">
+    <img class="character-image" alt="{{c.name}}" src="{{this.characterService.charactersUrl + '/images/' + c.image}}">
+    <p>{{c.name}}</p>
+  </div>
+
+</main>
 <app-footer></app-footer>
 

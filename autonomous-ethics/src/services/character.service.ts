@@ -8,7 +8,7 @@ import {httpOptionsBase, serverUrl} from "../configs/server.config";
   providedIn: 'root'
 })
 export class CharacterService {
-  private charactersUrl = serverUrl + 'characters'
+  public charactersUrl = serverUrl + 'characters'
 
   public characters$: BehaviorSubject<Character[]> = new BehaviorSubject<Character[]>([]);
 
