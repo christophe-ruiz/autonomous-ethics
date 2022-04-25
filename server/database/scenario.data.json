@@ -998,5 +998,100 @@
       "left": "gauche",
       "right": "droite"
     }
+  },
+  {
+    "id": 14,
+    "lights": {
+      "left": true,
+      "right": true
+    },
+    "car_occupants": [
+      {
+        "id": 4,
+        "image": "4.png",
+        "name": "Girl",
+        "sex": true,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 3,
+        "image": "3.png",
+        "name": "Boy",
+        "sex": false,
+        "special": {
+          "isYoung": true
+        }
+      },
+      {
+        "id": 7,
+        "image": "7.png",
+        "name": "Male celebrity",
+        "sex": false,
+        "special": {
+          "isCelebrity": true
+        }
+      },
+      {
+        "id": 12,
+        "image": "12.png",
+        "name": "Fat female",
+        "sex": true,
+        "special": {
+          "isFat": true
+        }
+      },
+      {
+        "id": 10,
+        "image": "10.png",
+        "name": "Female criminal",
+        "sex": true,
+        "special": {
+          "isCriminal": true
+        }
+      }
+    ],
+    "leftside": [
+      {
+        "id": 2,
+        "image": "2.png",
+        "name": "Executive female",
+        "sex": true,
+        "special": {
+          "isExecutive": true
+        }
+      },
+      {
+        "id": 3,
+        "image": "3.png",
+        "name": "Boy",
+        "sex": false,
+        "special": {
+          "isYoung": true
+        }
+      }
+    ],
+    "rightside": [
+      {
+        "id": 7,
+        "image": "7.png",
+        "name": "Male celebrity",
+        "sex": false,
+        "special": {
+          "isCelebrity": true
+        }
+      },
+      {
+        "id": 6,
+        "image": "6.png",
+        "name": "Female",
+        "sex": true
+      }
+    ],
+    "description": {
+      "left": "gauche",
+      "right": "droite"
+    }
   }
 ]

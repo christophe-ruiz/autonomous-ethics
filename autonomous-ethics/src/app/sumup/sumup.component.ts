@@ -27,7 +27,11 @@ export class SumupComponent implements OnInit {
 
   deleteStats(): void {
     this.session.deleteStats();
-    this.router.navigate(['/judge'])
+    this.router.navigate(['/judge']);
+  }
+
+  submitStats(): void {
+    this.session.submitStats();
   }
 
 }

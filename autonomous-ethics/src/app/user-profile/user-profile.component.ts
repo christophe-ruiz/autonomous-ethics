@@ -63,10 +63,10 @@ export class UserProfileComponent implements OnInit {
     console.log('valid')
     this.userProfileFormData.set('age', this.userProfileForm.get('age')!.value);
     this.userProfileFormData.set('gender', this.userProfileForm.get('gender')!.value);
-    this.userProfileFormData.set('religion', this.userProfileForm.get('religion')!.value);
+    this.userProfileFormData.set('religious_level', this.userProfileForm.get('religion')!.value);
+    this.userProfileFormData.set('education_level', this.userProfileForm.get('education')!.value);
     this.userProfileFormData.set('politics', this.userProfileForm.get('politics')!.value);
-    this.userProfileFormData.set('education', this.userProfileForm.get('education')!.value);
-    this.userProfileFormData.set('income', this.userProfileForm.get('income')!.value);
+    this.userProfileFormData.set('income_bracket', this.userProfileForm.get('income')!.value);
     this.userProfileFormData.set('country', this.userProfileForm.get('country')!.value);
 
     if (this.userProfileService.storeUser(this.userProfileFormData)) this.letsJudge();
